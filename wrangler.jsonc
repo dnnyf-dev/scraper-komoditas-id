@@ -1,9 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "komoditas-id-api",
+  "name": "scraper-komoditas-id-api",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-07",
   "workers_dev": true,
+  "kv_namespaces":[
+    { "binding": "STATE", "id": "19a1ddbda81e4ab8b2776978d94578aa" }
+  ]
   "triggers": {
     "crons": ["*/10 * * * *"]
   }
