@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "scraper-komoditas-id-api",
+  "name": "komoditas-id-api",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-07",
   "workers_dev": true,
-  "kv_namespaces":[
-    { "binding": "STATE", "id": "19a1ddbda81e4ab8b2776978d94578aa" }
-  ],
+  // WAJIB agar data live tersimpan (Cache API tidak jalan di *.workers.dev):
+  //   npx wrangler kv namespace create STATE   -> salin id ke bawah, lalu hapus tanda //
+  // "kv_namespaces": [{ "binding": "STATE", "id": "ISI_ID_KV_DI_SINI" }],
   "triggers": {
     "crons": ["*/10 * * * *"]
   }
